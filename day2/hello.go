@@ -16,12 +16,12 @@ func main() {
 	fmt.Println(reflect.TypeOf(num1))
 	fmt.Printf("number2 type is %T\n", num2)
 	fmt.Println(reflect.TypeOf(name))
-	IfLoop()
-	SwitchLoop()
-	FoorLoop()
+	greeting()
+	day()
+	evenNumbers()
 }
 
-func IfLoop() {
+func greeting() {
 	Time := time.Now()
 	Currenthour := Time.Hour()
 	if 8 <= Currenthour && Currenthour < 12 {
@@ -36,7 +36,7 @@ func IfLoop() {
 
 }
 
-func SwitchLoop() {
+func day() {
 	day := time.Now().Weekday()
 	switch day {
 	case time.Monday:
@@ -58,7 +58,7 @@ func SwitchLoop() {
 	}
 
 }
-func FoorLoop() {
+func evenNumbers() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 		i++
