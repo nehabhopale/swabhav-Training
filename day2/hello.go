@@ -23,13 +23,12 @@ func main() {
 
 func IfLoop() {
 	Time := time.Now()
-	h := Time.Hour()
-	fmt.Println(h)
-	if 8 <= h && h < 12 {
+	Currenthour := Time.Hour()
+	if 8 <= Currenthour && Currenthour < 12 {
 		fmt.Println("good morning")
-	} else if 12 <= h && h < 16 {
+	} else if 12 <= Currenthour && Currenthour < 16 {
 		fmt.Println("afternoon")
-	} else if 16 <= h && h <= 20 {
+	} else if 16 <= Currenthour && Currenthour <= 20 {
 		fmt.Println("evening")
 	} else {
 		fmt.Println("night")
@@ -38,21 +37,21 @@ func IfLoop() {
 }
 
 func SwitchLoop() {
-	day := 4
+	day := time.Now().Weekday()
 	switch day {
-	case 1:
+	case time.Monday:
 		fmt.Println("Monday")
-	case 2:
+	case time.Tuesday:
 		fmt.Println("Tuesday")
-	case 3:
+	case time.Wednesday:
 		fmt.Println("Wednesday")
-	case 4:
+	case time.Thursday:
 		fmt.Println("Thursday")
-	case 5:
+	case time.Friday:
 		fmt.Println("Friday")
-	case 6:
+	case time.Saturday:
 		fmt.Println("Saturday")
-	case 7:
+	case time.Sunday:
 		fmt.Println("Sunday")
 	default:
 		fmt.Println("Invalid")
@@ -60,7 +59,7 @@ func SwitchLoop() {
 
 }
 func FoorLoop() {
-	for i := 0; i < 4; i++ {
+	for i := 0; i < 10; i++ {
 		fmt.Println(i)
 		i++
 	}
