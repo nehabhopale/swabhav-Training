@@ -4,11 +4,14 @@ import "fmt"
 
 func a() func(float32, float32, func(float32, float32) float64) float64 {
 	fmt.Println("inside a function")
-	b := func(f1 float32, f2 float32, f func(float32, float32) float64) float64 {
+	/*b := func(f1 float32, f2 float32, f func(float32, float32) float64) float64 {
 		fmt.Println("function inside function")
 		return f(f1, f2)
 	}
-	return b
+	return b*/
+	return func(f1 float32, f2 float32, f func(float32, float32) float64) float64 {
+		return float64(f(f1, f2))
+	}
 }
 func mathoperation(f1, f2 float32, f func(float32, float32) float64) float64 {
 	return float64(f(f1, f2))
