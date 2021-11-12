@@ -17,11 +17,13 @@ func main() {
 }
 func increment(num int) {
 	fmt.Println("inside increment func add of num", &num)
-	num = num + 20 //this increement only the value num whose scope is inside increment only
+	num = num + 20   //this increement only the value num whose scope is inside increment only
+	fmt.Println(num) //30
 }
 
 //argument  is * int i.e. *dataType of variable who address u r sending
 func refrenceIncrement(num *int) { // num variable of type pointer pointing to int type eg.& num is pointer pointing to int type
 	fmt.Println("inside ref function value of passed num", num)
 	*num = *num + 30 //this is goint to increment the value present at location num
+	fmt.Println(*num)
 }
