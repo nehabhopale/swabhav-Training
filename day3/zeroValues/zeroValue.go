@@ -22,6 +22,7 @@ func main() {
 	fmt.Println("Zero value for map types: ", q7)
 
 	var a string
+
 	p := &a
 	fmt.Println("deref a pointer that is not initialized", *p)
 
