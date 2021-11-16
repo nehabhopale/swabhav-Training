@@ -42,7 +42,7 @@ func main() {
 	fmt.Println("after deleting from map", myMap)
 
 	map1 := make(map[string]int)
-	//var map2 map[string]int
+	var map3 map[string]int
 	fmt.Println("map1", map1)
 	map1["n"] = 2
 	//fmt.Println("map2", map2)
@@ -50,4 +50,8 @@ func main() {
 	map2 := map[string]int{}
 	map2["n"] = 2
 	fmt.Println("map2", map2)
+	map3 =map[string]int{
+		"p":4
+	}
+	fmt.Pritnln(map3)
 }
