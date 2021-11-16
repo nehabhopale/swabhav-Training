@@ -21,7 +21,7 @@ func (c *circle) GetParameters() float64 {
 func (c *circle) SetParameters(newRadius float64) {
 	c.radius = newRadius
 }
-func New(radius float64) *circle {
+func New(radius float64) *circle { //if u decide to return calue then return should be cir only not &cir
 	return &circle{
 		radius: radius,
 	}
