@@ -18,5 +18,7 @@ func main() {
 	} else {
 		fmt.Println("Sorry,your account balance is  not sufficient")
 	}
+	//validTransfer := neha.TransferMoney(pooja, -1000)
+	//fmt.Println(pooja.GetBalance())
 
 }
