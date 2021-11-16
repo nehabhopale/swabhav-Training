@@ -14,6 +14,13 @@ func (c circle) Area() float64 {
 func (c circle) Perimeter() float64 {
 	return 2 * math.Pi * c.radius
 }
+func (c *circle) GetParameters() float64 {
+	return c.radius
+}
+
+func (c *circle) SetParameters(newRadius float64) {
+	c.radius = newRadius
+}
 func New(radius float64) *circle {
 	return &circle{
 		radius: radius,

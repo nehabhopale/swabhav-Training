@@ -18,6 +18,16 @@ func main() {
 	getDetails(rect)
 	sq := square.New(2.5)
 	getDetails(sq)
+	fmt.Println(cir.GetParameters())
+	fmt.Println(tri.GetParameters())
+	fmt.Println(rect.GetParameters())
+	fmt.Println(sq.GetParameters())
+	cir.SetParameters(6.7)
+	tri.SetParameters(2, 3, 4, 5)
+	rect.SetParameters(7, 8)
+	sq.SetParameters(3.4)
+	fmt.Println(cir.GetParameters())
+
 }
 func getDetails(shape ShapeInterface.ShapeInterface) {
 	fmt.Println("area of a shape-", shape.Area())
