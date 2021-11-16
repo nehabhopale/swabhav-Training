@@ -6,10 +6,10 @@ import (
 )
 
 func main() {
-	cir := task.CircleInstance(3.2)
-	tri := task.TriangleInstance(3, 4, 5, 6)
-	rect := task.RectangleInstance(2.3, 1.2)
-	sq := task.SquareInstance(2.5)
+	cir := task.NewCircle(3.2)
+	tri := task.NewTriangle(3, 4, 5, 6)
+	rect := task.NewRectangle(2.3, 1.2)
+	sq := task.NewSquare(2.5)
 
 	fmt.Println("")
 	fmt.Println(cir.Area())
