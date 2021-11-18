@@ -9,6 +9,7 @@ func main(){
 	wg.Add(2)
 	go delayedIteration1()
 	go delayedIteration2()
+	wg.Wait()
 	fmt.Println("end of main")
 }
 func delayedIteration1(){
