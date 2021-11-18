@@ -46,7 +46,33 @@ func main() {
 	//Print the contents of the file
 	data1, err22 := ioutil.ReadFile("data.txt")
 	if err22 != nil {
-		log.Fatal(err)
+		log.Fatal(err22)
 	}
 	fmt.Println(string(data1))
+
+	//writing to file at diiff location
+	file3, err3 := os.OpenFile("C:/Users/neha/Documents/FileHandling/test.txt", os.O_APPEND|os.O_WRONLY, 0777)
+	if err3 != nil {
+		log.Println(err)
+	}
+	defer file3.Close()
+	if _, err := file3.WriteString("second line"); err != nil {
+		log.Fatal(err)
+	}
+
+	//Print the contents of the file
+	data11, err4 := ioutil.ReadFile("C:/Users/neha/Documents/FileHandling/test.txt")
+	if err4 != nil {
+		log.Fatal(err22)
+	}
+	fmt.Println(string(data11))
+
+	byteSlice := make([]byte, 5)
+	bytesRead, err9 := file3.Read(byteSlice)
+	if err9 != nil {
+		log.Fatal(err9)
+	}
+	log.Printf("Number of bytes read: %d\n", bytesRead)
+	log.Printf("Data read: %s\n", byteSlice)
+
 }
