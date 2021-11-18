@@ -24,7 +24,11 @@ func main() {
 	scaning := bufio.NewScanner(os.Stdin)
 	scaning.Scan()
 	sizeFormat := scaning.Text()
+	showSize(filepath,sizeFormat)
 	
+	
+}
+func showSize(filepath string,sizeFormat string){
 	file, err := os.Open(filepath)
 	if err != nil {
 		log.Fatal(err)
