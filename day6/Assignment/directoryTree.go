@@ -25,7 +25,7 @@ func printDirectory(path string, depth int) {
 	for _, entry := range entries {
 
 		for i := 0; i < depth; i++ {
-			fmt.Print("___")
+			fmt.Print("\t")
 		}
 
 		//full_path, _ := os.Readlink(filepath.Join(path, entry.Name()))

@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+//writing a file
+
 func main() {
 
 	f, err := os.Create("data.txt")
