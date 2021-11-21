@@ -8,7 +8,7 @@ type Landmark struct{
 	name string
 	Coordinates
 }
-func(l*Landmardk)Name()string{
+func(l*Landmark)Name()string{
 	return l.name
 }
 func(l*Landmark)SetName(name string)error{
