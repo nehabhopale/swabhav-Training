@@ -9,8 +9,9 @@ func main() {
 	}
 
 	x := cust{"neha", 1}
-	y := cust{"kli", 2}
+	//y := cust{"kli", 2}
 	var c []cust
 	c = append(c, x)
 	fmt.Println(c)
+	fmt.Println('A')
 }

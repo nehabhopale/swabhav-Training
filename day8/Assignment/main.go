@@ -30,5 +30,5 @@ func main() {
 	fmt.Println(neha.GetBalance())
 	fmt.Println(shardha.GetBalance())
 	fmt.Println(pooja.GetBalance())
-	time.Sleep(5 * time.Second)
+	time.Sleep(4* time.Second)
 }
