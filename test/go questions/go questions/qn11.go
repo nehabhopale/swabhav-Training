@@ -11,5 +11,6 @@ func main() {
 	fmt.Println(a) // O/P :-[1 2 3 4 6]
 	fmt.Println(s) // O/P :- [1 2 3 4]
 	// What is the expected output and why?
+	//for a and b we are making the changes at the same address of s
 
 }
