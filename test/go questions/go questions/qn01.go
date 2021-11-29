@@ -5,6 +5,6 @@ package main
 import "fmt"
 
 func main() {
-	myString := "Hello, Swabhav Techlabs!"
+	mystring := "Hello, Swabhav Techlabs!" //by mistake typed S
 	fmt.Println(mystring)
 }
