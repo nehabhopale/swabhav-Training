@@ -6,9 +6,9 @@ import (
 	"log"
 )
 
-func divide(num1 float64,num2 float64)float64,error{
+func divide(num1 float64,num2 float64)(float64,error){ 	//paran of return missing
 	if num2==0{
-		return nil,errors.New("can't divide by 0")
+		return 0.0,errors.New("can't divide by 0")
 	}
 	return num1/num2,nil
 }
