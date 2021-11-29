@@ -4,15 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	//"os"
 	"path/filepath"
-	//"strings"
 )
-
-// func printListing(entry string, depth int) {
-// 	//indent := strings.Repeat("|   ", depth)
-// 	fmt.Printf("|-- %s\n", entry)
-// }
 
 func printDirectory(path string, depth int) {
 	entries, err := ioutil.ReadDir(path)
@@ -21,21 +14,17 @@ func printDirectory(path string, depth int) {
 		return
 	}
 
-	//printListing(path, depth)
 	for _, entry := range entries {
 
 		for i := 0; i < depth; i++ {
 			fmt.Print("\t")
 		}
 
-		//full_path, _ := os.Readlink(filepath.Join(path, entry.Name()))
-
-		//printListing(entry.Name(), depth+1)
 		if entry.IsDir() {
 			fmt.Println("{" + entry.Name() + "}")
 			printDirectory(filepath.Join(path, entry.Name()), depth+1)
 		} else {
-			//printListing(entry.Name(), depth+1)
+
 			fmt.Println(entry.Name())
 		}
 	}
