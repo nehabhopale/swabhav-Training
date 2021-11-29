@@ -27,8 +27,8 @@ func repeat(s string, channel chan<- bool) {
 
 func main() {
 	channel := make(chan bool)
-	____ go repeat("x", channel)
-	____ go repeat("y", channel)
+	go repeat("x", channel)
+	 go repeat("y", channel)
 	<-channel
 	<-channel
 }

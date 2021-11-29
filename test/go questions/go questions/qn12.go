@@ -14,9 +14,9 @@ func main() {
 		// You can add code but can't remove to get the expected output
 		// Expected output should be 1 2 3 4 5 6
 		wg.Add(1)
-		go func() {
-			test()
-		}()
+		go func(num int) {
+			test(num)
+		}(num)
 		wg.Wait()
 	}
 }

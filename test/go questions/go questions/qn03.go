@@ -12,7 +12,7 @@ import "fmt"
 // is made, the function doesn't need to return
 // anything.
 func negate(myBoolean *bool) {
-	*myBoolean = !*myBoolean!(*myBoolean)
+	*myBoolean = !*myBoolean
 }
 
 func main() {
