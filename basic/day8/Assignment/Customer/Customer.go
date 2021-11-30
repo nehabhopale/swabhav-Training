@@ -3,6 +3,7 @@ package Customer
 import (
 	"fmt"
 	Restaurant "hotel/Restaurant"
+	"sync"
 )
 
 type Customer struct {
@@ -11,8 +12,10 @@ type Customer struct {
 	mobile_number uint64
 	password      string
 	balance       uint32
-	retName       string
+	restName      string
 }
+
+var wg = sync.WaitGroup{}
 
 func (c *Customer) GetName() string {
 	return c.name
@@ -47,7 +50,7 @@ func (c *Customer) PlaceOrder(rest *Restaurant.Restaurant, dish string) {
 	} else {
 		fmt.Println(dish, " is currently unavailable ")
 	}
-
+	wg.Done()
 }
 func New(name string, email string, mobileNum uint64, pwd string, balance uint32) *Customer {
 	return &Customer{
