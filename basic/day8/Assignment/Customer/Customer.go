@@ -15,7 +15,7 @@ type Customer struct {
 	restName      string
 }
 
-var wg = sync.WaitGroup{}
+//var wg = sync.WaitGroup{}
 
 func (c *Customer) GetName() string {
 	return c.name
@@ -34,7 +34,7 @@ func SignUp(newd *Customer) {
 
 }
 
-func (c *Customer) PlaceOrder(rest *Restaurant.Restaurant, dish string) {
+func (c *Customer) PlaceOrder(rest *Restaurant.Restaurant, dish string, wg *sync.WaitGroup) {
 	var bill uint32 = 0
 	orderPrize, availability := rest.GetItemDetails(dish)
 	if availability != false {
