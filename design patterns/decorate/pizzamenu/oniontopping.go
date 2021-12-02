@@ -1,10 +1,10 @@
 package pizzamenu
 
-type TomatoTopping struct{
+type OnionTopping struct{
 	Pizza Pizza
 }
 
-func (t *TomatoTopping) GetPrize() uint32 {
+func (t *OnionTopping) GetPrize() uint32 {
 	pizzaPrice := t.Pizza.GetPrize()
 	return pizzaPrice + 20
 }

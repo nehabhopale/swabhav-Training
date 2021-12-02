@@ -13,16 +13,17 @@ func main() {
 	}
 
 	fmt.Println("pizza with cheese",extravagnzaPizzaWithCheese.GetPrize())
-	//Add tomato topping
-	extravagnzaPizzaWithTomato := &pizzamenu.TomatoTopping{
+	//Add onion topping
+	extravagnzaPizzaWithOnion := &pizzamenu.OnionTopping{
 		Pizza: extravagnzaPizza,
 	 }
-	 fmt.Println("pizza with tomato",extravagnzaPizzaWithTomato.GetPrize())
+	 fmt.Println("pizza with onion",extravagnzaPizzaWithOnion.GetPrize())
 
-	//add cheese and tomato toppings
-	extravagnzaPizzaWithCheeseAnTomato:=&pizzamenu.TomatoTopping{
+	 extravagnzaPizzaWithCheeseAnOnion:=&pizzamenu.OnionTopping{
 		Pizza: extravagnzaPizzaWithCheese,
 	}
-	fmt.Println("pizza with cheese and tomato",extravagnzaPizzaWithCheeseAnTomato.GetPrize())
+	fmt.Println("pizza with cheese and Onion",extravagnzaPizzaWithCheeseAnOnion.GetPrize())
+
+	
 	
 }
